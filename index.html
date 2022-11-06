@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;400;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Space Travel Agency</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo-text">
+          <img src="./assets/images/icons/logo-space.svg" alt="logo space travel" class="logo" width="100px" height="100px"/>
+          <span>
+            <a class="link" href="#contact">Space Travel Agency</a>
+          </span>
+      </div>
+      <div class="menu">
+        <div class="mobile-menu">
+          <button class="hamburger closed"></button>
+        </div>
+        <ul id="items" class="list">
+          <li class="link-wrapper"><a class="link" href="#earth">Earth</a></li>
+          <li class="link-wrapper"><a class="link" href="#moon">Moon</a></li>
+          <li class="link-wrapper"><a class="link" href="#mars">Mars</a></li>
+          <li class="link-wrapper"><a class="link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main style="display: flex; flex-direction: column">
+      <section class="planet earth" id="earth">
+        <header>
+          <h1>EARTH</h1>
+          <span>home</span>
+        </header>
+        <p>
+          Have you ever thought how the Erath looks like from outer space? Is it possible to see the Great Wall of China? How life on the space station taste? What astronauts feel looking at the Earth? Now you can experience the same. We offer you a journey around the Earth. In the real space station. Enjoy the sight on Earth from outer space and savour the unique experience. The food and equipment are within the budget.
+        </p>
+        <button id="launchEarth">launch</button>
+      </section>
+
+      <!-- Form for trip around the Earth -->
+      <div id="formEarth">
+        <form id="alertEarth" action="" method="post">
+          <input type="button" id="closeEarth" />
+          <span class="formHeadline">Trip around the Earth</span>
+          <label for="date"
+            >Choose your date:
+            <select id="date" name="date" required>
+              <option value="" disabled >Select a date</option>
+              <option value="first">01.04.2022 - 21.04.2022</option>
+              <option value="second">01.07.2022 - 31.07.2022</option>
+              <option value="third">15.09.2022 - 07.10.2022</option>
+              <option value="fourth">14.12.2022 - 10.01.2023</option>
+            </select>
+          </label>
+
+          <label for="name"
+            >Enter your name:
+            <input
+              id="name"
+              type="text"
+              name="name"
+              value=""
+              placeholder="John Smith"
+            required/>
+          </label>
+          <label for="telephone"
+            >Enter your phone number:
+            <input
+              id="telephone"
+              type="tel"
+              name="telephone"
+              value=""
+              placeholder="+420 123 456 789"
+            required/>
+          </label>
+          <label for="email"
+            >Enter your e-mail address: <input
+              id="email"
+              type="email"
+              name="email"
+              value="@"/ required></label
+          ><input type="submit" value="Submit"/>
+
+                  </form>
+      </div>
+
+      <section class="planet moon" id="moon">
+        <header>
+          <h1>MOON</h1>
+          <span>384 400 km</span>
+        </header>
+        <p>
+          That is one small step for man, one giant leap for mankind. Who has never heard this sentence? Now you can make the same step as Neil Armstrong.  You can walk on the Moon, but now you can even relax and live for a while on the Moon. We offer a Moon visit including food and indispensable equipment. Enjoy the view from the Moon.
+        </p>
+        <button id="launchMoon">launch</button>
+      </section>
+
+      <!-- Form for trip to the Moon -->
+
+      <div id="formMoon">
+        <form id="alertMoon" action="" method="post">
+          <input type="button" id="closeMoon" />
+          <span class="formHeadline">Trip to the Moon</span>
+          <label for="date"
+            >Choose your date:
+            <select id="date" name="date" required>
+              <option value="" disabled >Select a date</option>
+              <option value="first">01.04.2022 - 31.10.2022</option>
+              <option value="second">01.07.2022 - 31.01.2023</option>
+              <option value="third">15.09.2022 - 14.03.2023</option>
+              <option value="fourth">14.12.2022 - 01.07.2023</option>
+            </select>
+          </label>
+
+          <label for="name"
+            >Enter your name:
+            <input
+              id="name"
+              type="text"
+              name="name"
+              value=""
+              placeholder="John Smith"
+            required/>
+          </label>
+          <label for="telephone"
+            >Enter your phone number:
+            <input
+              id="telephone"
+              type="tel"
+              name="telephone"
+              value=""
+              placeholder="+420 123 456 789"
+            required/>
+          </label>
+          <label for="email"
+            >Enter your e-mail address: <input
+              id="email"
+              type="email"
+              name="email"
+              value="@"/ required></label
+          ><input type="submit" value="Submit"/>
+
+        </form>
+      </div>
+
+      <section class="planet mars" id="mars">
+        <header>
+          <h1>MARS</h1>
+          <span>217 440 000 km</span>
+        </header>
+        <p>
+        The red planet can offer much more than a deserted landscape. In this tour, we offer you can explore the calmness a silence of Mars. You can use this trip for scientific research (maybe you are the next laureate of the Nobel prize). Be the first real interplanetary traveller.
+        </p>
+        <button id="launchMars">launch</button>
+      </section>
+
+
+      <!-- Form for trip to the Mars -->
+
+      <div id="formMars">
+        <form id="alertMars" action="" method="post">
+          <input type="button" id="closeMars" />
+          <span class="formHeadline">Trip to the Mars</span>
+          <label for="date"
+            >Choose your date:
+            <select id="date" name="date" required>
+              <option value="" disabled >Select a date</option>
+              <option value="first">03.01.2023 - 30.11.2023</option>
+              <option value="second">01.04.2023 - 03.01.2024</option>
+              <option value="third">15.09.2023 - 30.08.2024</option>
+              <option value="fourth">01.12.2023 - 31.10.2024</option>
+            </select>
+          </label>
+
+          <label for="name"
+            >Enter your name:
+            <input
+              id="name"
+              type="text"
+              name="name"
+              value=""
+              placeholder="John Smith"
+             required/>
+          </label>
+          <label for="telephone"
+            >Enter your phone number:
+            <input
+              id="telephone"
+              type="tel"
+              name="telephone"
+              value=""
+              placeholder="+420 123 456 789"
+            required/>
+          </label>
+          <label for="email"
+            >Enter your e-mail address: <input
+              id="email"
+              type="email"
+              name="email"
+              value="@"/ required></label
+          ><input type="submit" value="Submit" />
+
+        </form>
+      </div>
+
+      <section class="contact" id="contact">
+        <h1>Contact Us</h1>
+        <address>
+          <p>
+            <a href="mailto:info@spacetravel.com">info@spacetravel.com</a><br />
+            Phone: +420 987 654 321
+            Visit us at:<br />
+            Vodičkova 33</br>
+            100 00, Praha</br>
+            Czechia</br>
+          </p>
+        </address>
+      </div>
+    </main>
+    <footer>© Copyright 2021 Space Travel Agency</footer>
+    <script src="script.js"></script>
+  </body>
+</html>

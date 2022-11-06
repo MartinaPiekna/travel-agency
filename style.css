@@ -1,0 +1,369 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: 'Anurati';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Anurati'),
+    url('./assets/fonts/Anurati-Regular.otf') format('truetype');
+}
+
+html,
+body,
+main {
+  margin: 0;
+  color: white;
+}
+
+body {
+  background-color: black;
+  padding: 0 20px 20px;
+}
+
+main {
+  margin-top: 100px;
+}
+
+img {
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+nav {
+  padding: 0;
+  font-family: 'Fira Sans', sans-serif;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  margin: -100px 0 0 0;
+  width: 100%;
+}
+@supports (-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px)) {
+  nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+  }
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.logo-text {
+  display: flex;
+  align-items: center;
+}
+
+.menu > ul {
+  display: flex;
+  list-style: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+ul li {
+  padding: 0 50px 0 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+.link-wrapper {
+  position: relative;
+}
+
+.link:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s;
+}
+
+.link:hover:after {
+  transform: scaleX(1);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: 'Anurati', serif;
+  font-size: 72px;
+  opacity: 0;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  animation: fromTop 1s forwards ease-in-out;
+}
+
+h1 + span {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: larger;
+}
+
+.planet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.earth {
+  background-image: url('./assets/images/earth.jpg');
+}
+
+.moon {
+  background-image: url('./assets/images/moon.jpg');
+}
+
+.mars {
+  background-image: url('./assets/images/mars.jpg');
+}
+
+.planet button {
+  width: 120px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: none;
+  margin: 1rem 0 3rem;
+  font-weight: 900;
+  font-family: 'Fira Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  animation: fromBottom 2s forwards ease-in-out;
+}
+
+address {
+  margin: 20px auto 3rem;
+}
+
+address > p,
+a {
+  font-family: 'Fira Sans', sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.5;
+}
+
+p,
+footer {
+  margin-top: auto;
+  max-width: 30rem;
+  text-align: justify;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2rem;
+}
+
+footer {
+  margin: 0 auto 10px auto;
+  text-align: center;
+}
+
+/* ANIMATION */
+
+@keyframes fromTop {
+  0% {
+    transform: translateY(-24px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fromBottom {
+  100% {
+    transform: translateY(-24px);
+  }
+  0% {
+    opacity: 1;
+  }
+}
+
+/* FORM */
+form {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 100;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  position: fixed;
+  top: 30%;
+  right: 10%;
+  background-color: rgb(30, 30, 30);
+  color: rgb(190, 190, 190);
+  z-index: 1;
+}
+
+form button {
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.formHeadline {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+#earth,
+#moon,
+#mars {
+  position: relative;
+}
+
+#formEarth,
+#formMoon,
+#formMars {
+  display: none;
+}
+
+#closeEarth,
+#closeMoon,
+#closeMars {
+  background-color: rgb(30, 30, 30);
+  background-image: url('assets/images/icons/close.png');
+  background-repeat: no-repeat;
+  background-size: 2rem;
+  width: 0;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.form-show {
+  display: flex;
+  animation: slideFromRight 2s forwards ease-in-out;
+}
+
+input,
+select {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  margin-bottom: 1rem;
+}
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.link {
+  display: flex;
+  position: relative;
+  text-decoration: none;
+  padding: 10px 0;
+  color: #fff;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 600px) {
+  form {
+    top: 10%;
+    right: 0;
+  }
+  .mobile-menu {
+    display: flex;
+    margin: 0 15px;
+  }
+  .hamburger {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    background-image: url('./assets/images/icons/menu-open.svg');
+    outline: none;
+  }
+
+  .open {
+    display: inline-block;
+  }
+
+  nav {
+    padding: 0;
+  }
+
+  ul.list {
+    display: none;
+  }
+
+  ul.opened-list {
+    display: flex;
+    background-color: black;
+    border-radius: 5px;
+  }
+
+  ul.closed-list {
+    display: none;
+  }
+
+  ul {
+    flex-direction: column;
+    padding: 0 15px;
+    position: absolute;
+    right: 0;
+    top: 80px;
+    z-index: 1;
+  }
+}
